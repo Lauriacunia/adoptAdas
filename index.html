@@ -1,64 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Adopcion de mascotas</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
-    <nav>
-      <div>#AdoptAdas</div>
-      <i class="fa fa-bars"></i>
-    </nav>
 
-    <section class="main">
-      <div class="main_info">
-        <h2>Adopta un gatito</h2>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-        <p>
-          Suspendisse auctor urna blandit ultricies maximus. Sed accumsan auctor
-          lacus ac mattis. Mauris at nibh purus. Nullam vulputate, urna value
-          facilisis eleifend, nisl turpis suscipit augue, eget tincidunt velit
-          nunc ut lectus. Phasellus viverra nec augue at iaculis. Nullam
-          scelerisque tincidunt sapien vitae sodales. Sed tristique ut nulla a
-          ultricies. Aliquam sit amet sodales elit, et pellentesque lorem.
-          Praesent quis nibh value arcu porta lobortis. Morbi rutrum ut risus sed
-          hendrerit. Integer laoreet odio nec nisi varius, at scelerisque nisi
-          rhoncus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Quisquam dolorum temporibus fuga voluptatum vero, dolore tempore neque
-          saepe quo reiciendis?
-        </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Clase 55</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+</head>
+
+<body>
+
+
+  <div class="navbar is-dark">
+    <div class="container">
+      <div class="navbar-brand">
+        <figure class="image is-64x64">
+          <img class="is-rounded" src="http://www.placekitten.com/100/100" />
+        </figure>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <i class="icon fas fa-bars"></i>
+        </a>
       </div>
-      <div class="main_img">
-        <img src="img/main_img.jpg" />
+
+      <!--MENU DE NAVEGACION-->
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">Home</a>
+          <a class="navbar-item">Quiero Adoptar</a>
+          <a class="navbar-item">Donaciones</a>
+
+          <!-- Hacer un dropdown en uno de los items-->
+          <div class="navbar-item has-dropdown is-hoverable" id="menu">
+            <a class="navbar-link">Miau</a>
+            <!--el titulo-->
+            <div class="navbar-dropdown">
+              <a class="navbar-item">Gatitos pequeños</a>
+              <a class="navbar-item">Gatos adultos</a>
+              <a class="navbar-item">Todos</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <button class="button is-primary">Registrarse</button>
+          </div>
+          <div class="navbar-item">
+            <button class="button is-info is-outlined">Iniciar Sesion</button>
+          </div>
+
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
 
 
-    <section class="adopt">
-    </section>
+  <section class="section main">
+    <div class="container">
+      <div class="card">
+        <div class="columns">
+
+          <div class="column">
+            <div class="main_info content">
+              <h2 class="title is-1">Adopta un gatito</h2>
+              <h3 class="subtitle is-3">Peludos, coloridos y mimosos</h3>
+              <p class="content">
+                Adoptar un gato callejero o un gato sin hogar en un refugio de animales es una experiencia maravillosa que
+                todo amante de los animales debería realizar alguna vez en su vida. No obstante, muchos se preguntan cuál
+                de estas opciones es la más indicada, qué pasos se deben seguir para adoptar un gato o qué ventajas supone
+                adoptar un gatito cachorro o en lugar de un gato adulto.
+
+                Si tú también te preguntas si deberías adoptar un gato, has llegado al sitio adecuado, en AdoptAdas
+                vamos a intentar guiarte para que conozcas los motivos principales para adoptar y también te ofreceremos
+                algunos consejos útiles que debe seguir cualquier propietario primerizo.
+              </p>
+            </div>
+          </div>
+
+          <div class="column">
+            <figure class="image main_img">
+              <img src="img/main_img.jpg" />
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-    <section class="adopt-extra">
-    </section>
+  <section class=" section">
+    <div class="container">
+      <div class="columns is-multiline is-centered adopt">
+      </div>
+    </div>
+  </section>
 
 
-    <div class="footer">
+  <footer class="footer is-centered">
+    <div class="content has-text-centered">
       <div class="footer_icons">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-google-plus"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-dribbble"></i>
+        <i class="icon fab fa-facebook"></i>
+        <i class="icon fab fa-google-plus-g"></i>
+        <i class="icon fab fa-twitter"></i>
       </div>
       <p>© 2020 | All Rights Reserved</p>
     </div>
+  </footer>
 
-    <script src="main.js"></script>
-  </body>
+  <!-- MODAL VER MAS-->
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      
+    </div>
+  </div>
+
+
+  <script src="main.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+</body>
+
 </html>

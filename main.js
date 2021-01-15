@@ -1,6 +1,6 @@
 const gatos = [
   {
-    name: 'RODOLFO',
+    name: 'Rodolfo',
     shortDesc:
       'Tiene 4 años, le gusta perseguir mariposas, se lleva bien con niños y con otros gatos.',
     longDesc:
@@ -111,20 +111,32 @@ const gatos = [
 const cont = document.querySelector('.adopt');
 
 gatos.map(gato => {
-  cont.innerHTML += `<div class="card">
-  <div class="card_img">
-    <img src="${gato.img}" />
-  </div>
-  <div class="card_info">
-    <h3>${gato.name}</h3>
-    <p>
-      ${gato.shortDesc}
-    </p>
-    <button>Ver mas</button>
-
-  <i id="corazon" class="fa fa-heart"></i> <p id="likes">0<p>
-  </div>
-</div>`;
+  cont.innerHTML += `
+    <div class="column is-half">
+      <article class="card">
+         <div class="columns">
+              <div class="column">
+                    <div class="card-image">
+                        <figure class="image is-16by9 card_img">
+                             <img src="${gato.img}" />
+                        </figure>
+                    </div>
+              </div>
+              <div class="column">
+                    <div class="card-content">
+                          <h3 class="title is-5">${gato.name}</h3>
+                          <p class="content">
+                            ${gato.shortDesc}
+                          </p>
+                          <button class="button btn-ver-mas">Ver mas</button>
+                          <i id="corazon" class="icon fa fa-heart"></i> 
+                          <p id="likes">0<p>
+                    </div>
+              </div>
+          </div>          
+       </article>
+    </div>
+  `;
 });
 
 const corazones = document.querySelectorAll('#corazon');
@@ -153,3 +165,24 @@ corazones.forEach((corazon, indiceCorazon) => {
     // likes[indiceCorazon].textContent = cantidadDeLikes
   };
 });
+
+
+// MODAL VER MAS
+
+const botonesVerMas = document.querySelectorAll(".btn-ver-mas")
+
+
+modalCard.innerHTML = `
+<header class="modal-card-head">
+    <p class="modal-card-title">Modal title</p>
+    <button class="delete" aria-label="close"></button>
+</header>
+<section class="modal-card-body">
+    <p> Acá va el contenido del modal</p>
+</section>
+<footer class="modal-card-foot">
+    <button class="button is-success">Save changes</button>
+    <button class="button">Cancel</button>
+</footer>
+
+`
