@@ -150,7 +150,7 @@ console.log(corazones);
 corazones.forEach((corazon, indiceCorazon) => {
   corazon.onclick = () => {
     console.log("me hicieron click", indiceCorazon)
- 
+
     likes.forEach((like, indiceLike) => {
       if (indiceCorazon === indiceLike) {
         let cantidadDeLikes = Number(like.textContent);
@@ -170,19 +170,59 @@ corazones.forEach((corazon, indiceCorazon) => {
 // MODAL VER MAS
 
 const botonesVerMas = document.querySelectorAll(".btn-ver-mas")
+console.log(botonesVerMas)
+const modalCard = document.querySelector(".modal-card")
+const modal = document.querySelector(".modal")
+
+botonesVerMas.forEach((btnVerMas, indiceBtn) => {
+  btnVerMas.onclick = () => {
+    console.log("me hicieron click")
+
+    const gatitoElegido = gatos[indiceBtn]
 
 
-modalCard.innerHTML = `
-<header class="modal-card-head">
-    <p class="modal-card-title">Modal title</p>
-    <button class="delete" aria-label="close"></button>
-</header>
-<section class="modal-card-body">
-    <p> Acá va el contenido del modal</p>
-</section>
-<footer class="modal-card-foot">
-    <button class="button is-success">Save changes</button>
-    <button class="button">Cancel</button>
-</footer>
+    modalCard.innerHTML = `
+ 
+  <article class="card">
+    <div class="columns">
+        <div class="column">
+              <div class="card-image">
+                  <figure class="image is-16by9 card_img">
+                        <img src="${gatitoElegido.img}" />
+                  </figure>
+              </div>
+        </div>
+        <div class="column">
+              <div class="card-content">
+                    <button class="button" id="close" aria-label="close">
+                          <i class="icon far fa-window-close"></i>
+                    </button>
+                    <h3 class="title is-5">${gatitoElegido.name}</h3>
+                    <p class="content">
+                      ${gatitoElegido.shortDesc}
+                    </p>
+                    <i id="corazon" class="icon fa fa-heart"></i> 
+                    <p id="likes">0<p>
+              </div>
+        </div>
+    </div>          
+  </article>
+ 
+  `
+    modal.classList.add("is-active")
 
-`
+
+    // CERRAR MODAL
+
+    const botonCerrarModal = document.querySelector("#close")
+    console.log(botonCerrarModal)
+
+    botonCerrarModal.onclick = () => {
+      console.log("hiciste click en cerrar")
+      modal.classList.remove("is-active")
+    }
+
+  };
+});
+
+
